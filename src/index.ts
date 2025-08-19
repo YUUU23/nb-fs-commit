@@ -66,7 +66,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     async function revert(hash: string) {
       console.log('reverting to hash: ', hash);
-      const data = await requestAPI<any>(`revert-commit?hash=${hash}`);
+      const data = await requestAPI<any>(`make-revert?hash=${hash}`);
       console.log('data: ', data);
     }
 
