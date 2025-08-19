@@ -117,7 +117,6 @@ const plugin: JupyterFrontEndPlugin<void> = {
       );
       if (cell.model.id === cellReverted) {
         // Refresh commit for cell ran and all subsequent cells.
-        await makeCommit(cellReverted);
         const subsequentCells = getSubsequentCells(cellReverted);
         await makeCommitAndRunCells(subsequentCells);
 

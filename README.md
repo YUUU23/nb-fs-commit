@@ -1,8 +1,8 @@
 # jupyter_fs
 
-[![Github Actions Status](https://github.com/YUUU23/nb-fs-commit.git/workflows/Build/badge.svg)](https://github.com/YUUU23/nb-fs-commit.git/actions/workflows/build.yml)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YUUU23/nb-fs-commit.git/main?urlpath=lab)
-
+1. **Before Starting Notebook:** A notebook runs in an empty directory in a git repository and the notebook file is added to gitignore. The notebook extension is installed and after beginning a session in jupyter-lab, click “Start Session” to start file-system tracking.
+2. **Set-up:** Immediately after turning on the extension, the notebook will run all cells from top to bottom first. Prior to running a cell, we will make a git commit and associate the commit hash to the cell ran.
+3. **Modification:** Before running modified cell, restore state using associated hash, and run the modified cell. After the modified cell ran, run subsequent cells. We will update the commit hash of each subseqeunt cell too by making a commit prior to running the cell.
 
 A JupyterLab extension (fs aware).
 
