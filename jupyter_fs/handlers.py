@@ -27,21 +27,12 @@ class RouteHandlerCommit(APIHandler):
 class RouteHandlerRevert(APIHandler):
     @tornado.web.authenticated
     def get(self):
-<<<<<<< HEAD
         script_path = "./jupyter_fs/script/revert.sh"
         hash = self.get_argument("hash")
         result = subprocess.run(["bash", script_path, hash], capture_output=True, text=True)
         self.write(json.dumps({
             "res": result.stdout,
             "error": result.stderr
-=======
-        script_path = ""
-        hash = self.get_argument("hash")
-        self.write(json.dumps({
-            "curdir": "reverting", 
-            "hash": hash, 
-            "error": ""
->>>>>>> ec0939f7550f5f10a26b19b748825aa9b0a46634
         }))
         
 
